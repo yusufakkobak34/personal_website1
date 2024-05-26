@@ -171,6 +171,11 @@ body {
     position: absolute;
     right: 0;
     transform-style: preserve-3d;
+    transform-origin: left;
+}
+
+.book-page.page-right.turn {
+    transform: rotateY(-180deg);
 }
 
 .book-page .page-front,
@@ -226,9 +231,30 @@ body {
     margin-right: .4rem;
 }
 
+/* Page number element */
 .number-page{
     position: absolute;
     bottom: 1.2rem;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* Next Button Element */
+.nextprev-btn {
+    position: absolute;
+    bottom: .9rem;
+    right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--second-text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.nextprev-btn:hover {
+    color: var(--main-color);
 }
